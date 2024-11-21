@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Java Script</title>
+    <link rel="stylesheet" href="index.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"
+    />
+  </head>
+  <body>
+    <div class="section">
+      <div class="header">
+        <div class="circles">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <h3>BMI Calculation</h3>
+      </div>
+      <div class="main-div BMI" oninput="bmi()">
+        <h1>BMI Calculation</h1>
+        <section class="input-info">
+          <div>
+            Weight(Kg):
+            <span id="Weight-span">1</span>
+          </div>
+          <input id="Weight-input" value="0" type="range" max="300" min="1" />
+        </section>
+        <section class="input-info">
+          <div>
+            Height(cm):
+            <span id="Height-span">100</span>
+          </div>
+          <input type="range" value="0" max="210" min="100" id="Height-input" />
+        </section>
+        <section class="result">
+          <div>BMI: <span id="bmi-result" class="bmi-result">--</span></div>
+          <div>
+            Status :
+            <span id="bmi-status" class="bmi-status"></span>
+          </div>
+        </section>
+      </div>
+    </div>
+    <!-- -------------------------------------------- -->
+
+    <div class="section">
+      <div class="header">
+        <div class="circles">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <h3>Music Player</h3>
+      </div>
+      <div class="main-div">
+        <div class="music-box">
+          <!-- music info -->
+          <div class="details">
+            <img class="image-box" id="song-cover" alt="" />
+            <h1 id="song-title" class="song-title">song title</h1>
+            <h1 id="song-artist" class="artist">artist</h1>
+          </div>
+          <!-- progress bar -->
+          <div class="progress-bar">
+            <input id="progress" class="progress" value="0" type="range" onchange="progress()" />
+          </div>
+          <!-- navigation buttons -->
+          <div class="control-panel">
+            <button id="repeatBtn" onclick="repeatSong()">
+              <i class="bi bi-arrow-clockwise"></i>
+            </button>
+            <button id="prevBtn" onclick="prevSong()">
+              <i class="bi bi-caret-left"></i>
+            </button>
+            <button id="playPauseBtn" onclick="playpauseSong()">
+              <i class="bi bi-play-btn"></i>
+            </button>
+            <button id="nextBtn" onclick="nextSong()">
+              <i class="bi bi-caret-right"></i>
+            </button>
+            <button id="shuffleBtn" onclick="shuffleSong()">
+              <i class="bi bi-shuffle"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- -------------------------------------------- -->
+    <div class="section">
+      <div class="header">
+        <div class="circles">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <h3>count down timer</h3>
+      </div>
+      <div class="main-div">
+        <div class="count-timer">
+          <div class="little-div">
+            <section><span id="day"></span><span>Day</span></section>
+            <section><span id="hour"></span><span>Hour</span></section>
+            <section><span id="minute"></span><span>Minute</span></section>
+            <section><span id="second"></span><span>Second</span></section>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- -------------------------------------------- -->
+
+    <div class="section">
+      <div class="header">
+        <div class="circles">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <h3>Form Validation</h3>
+      </div>
+      <div class="main-div">
+        <form action="" class="form" id="form">
+          <div class="input-div">
+            <label id="username-label" for="username">Username</label>
+            <input name="username" type="text" id="username" />
+          </div>
+          <div id="username-e" class="invalid" error>
+            Username must be at least 6 characters
+          </div>
+
+          <div class="input-div">
+            <label for="email">E-mail</label>
+            <input name="email" type="email" id="email" />
+          </div>
+          <div id="email-e" class="invalid" error>Email is not valid</div>
+
+          <div class="input-div">
+            <label for="password">Password</label>
+            <input name="password" type="password" id="password" />
+          </div>
+          <div id="password-e" class="invalid" error>
+            Password must be at least 8 characters long and contain at least one
+            letter
+          </div>
+
+          <div class="input-div">
+            <label for="re-password">Re-password</label>
+            <input name="rePassword" type="password" id="re-password" />
+          </div>
+
+          <div id="re-password-e" class="invalid" error>
+            Passwords do not match
+          </div>
+          <div id="re-password-e-2" class="invalid" error>
+            Please Enter the password first
+          </div>
+
+          <button class="button">LOGIN</button>
+        </form>
+      </div>
+    </div>
+    <!-- -------------------------------------------- -->
+    <script src="index.js"></script>
+  </body>
+</html>
